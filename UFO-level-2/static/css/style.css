@@ -3,6 +3,10 @@
   font-family: Ubuntu, sans-serif;
 }
 
+th {
+	font-weight:bold;
+}
+
 html,
 body {
   height: 100%;

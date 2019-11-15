@@ -38,9 +38,12 @@ function Filter_Data() {
 	
 	// Getting the DateTime Value
 	var DateTime = d3.select("#datetime").property("value");
+	
+	//Filter Criteria
+	var Filtered_Data = data;
 
 	if (DateTime != ""){
-    	Filtered_Data = Table_Data.filter(FilteredData => FilteredData.datetime === DateTime);
+    	Filtered_Data = Filtered_Data.filter(FilteredData => FilteredData.datetime === DateTime);
     }
 
     tbody.html("");
