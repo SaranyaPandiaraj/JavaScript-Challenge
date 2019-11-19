@@ -3,8 +3,8 @@ Repository is created to create a table dynamically based on Aliens Data Set. We
 
 Final Website : https://saranyapandiaraj.github.io/JavaScript-Challenge/index.html
 
-## <ins> Final Look of the Website </ins>
+## <ins> UFO Sightings </ins>
 
-![UFO](UFO.png)
+![UFO](UFO.PNG)
 
 <hr>
