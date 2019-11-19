@@ -18,7 +18,7 @@ var Clear_Button = d3.select("#clear-btn");
 var tbody = d3.select("tbody");
 
 
-//Appending Data in Webpage
+//Function for Retrieving Data 
 
 function Retrieve_Data(data) {
 	
@@ -31,12 +31,14 @@ function Retrieve_Data(data) {
 	});
 }
 
+//Function for Filtering Data 
+
 function Filter_Data() {
 	
 	//Prevent page from refreshing in form
 	d3.event.preventDefault();		
 	
-	// Getting the DateTime Value
+	// Getting the DateTime, City, State, Country & Shape Value
 	var DateTime = d3.select("#datetime").property("value");
 	
 	//Filter Criteria
@@ -50,21 +52,27 @@ function Filter_Data() {
     Retrieve_Data(Filtered_Data);
 }
 
+//Function for Clearing Data 
 
 function Clear_Data() {
 	
 	tbody.html("");
 }
 
+//Function for Resetting Data 
+
 function Reset_Data() {
+	
 	
 	tbody.html("");
 	Retrieve_Data(Table_Data);
 }
 
 
-//Calling the Retrieve Data Function & Filter Data Function
+//Calling the Retrieve Data Function
 Retrieve_Data(Table_Data);
+
+//Calling Respective function based on CLick
 Filter_Button.on("click", Filter_Data);
 Reset_Button.on("click", Reset_Data);
 Clear_Button.on("click", Clear_Data);

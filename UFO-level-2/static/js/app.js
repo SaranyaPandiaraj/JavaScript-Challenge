@@ -18,7 +18,7 @@ var Clear_Button = d3.select("#clear-btn");
 var tbody = d3.select("tbody");
 
 
-//Appending Data in Webpage
+//Function for Retrieving Data 
 
 function Retrieve_Data(data) {
 	
@@ -30,6 +30,8 @@ function Retrieve_Data(data) {
 	  });
 	});
 }
+
+//Function for Filtering Data 
 
 function Filter_Data() {
 	
@@ -67,11 +69,14 @@ function Filter_Data() {
     Retrieve_Data(Filtered_Data);
 }
 
+//Function for Clearing Data 
 
 function Clear_Data() {
 	
 	tbody.html("");
 }
+
+//Function for Resetting Data 
 
 function Reset_Data() {
 	
@@ -81,8 +86,10 @@ function Reset_Data() {
 }
 
 
-//Calling the Retrieve Data Function & Filter Data Function
+//Calling the Retrieve Data Function
 Retrieve_Data(Table_Data);
+
+//Calling Respective function based on CLick
 Filter_Button.on("click", Filter_Data);
 Reset_Button.on("click", Reset_Data);
 Clear_Button.on("click", Clear_Data);
